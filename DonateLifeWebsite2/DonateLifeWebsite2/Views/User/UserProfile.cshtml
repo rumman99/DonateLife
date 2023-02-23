@@ -1,0 +1,511 @@
+﻿
+@model DatabaseLayer.UserTable
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+
+
+<div class="container">
+    <div class="col-md-12 margin-top-30">
+        <h2>User Profile</h2>
+
+        
+            @Html.ActionLink("Edit Profile", "EditUserProfile", new { id = Model.UserID }, new { @class = "btn btn-primary" })
+          
+       
+        <div class="contact-form-block">
+            <hr />
+            <h3>User Profile</h3>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    User Name
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UserName)
+                </dd>
+
+
+
+                <dt>
+                    Email Address
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </dd>
+
+                <dt>
+                    Account Status
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AccountStatusTable.AccountStatus)
+                </dd>
+
+                <dt>
+                    Relationship
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UserTypeTable.UserType)
+                </dd>
+                <dt>
+                   Message
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+            </dl>
+            @{if (Model.HospitalTables.Count > 0)
+                {
+                    foreach (var hospital in Model.HospitalTables)
+                    {
+
+
+                        <h4>Hospital Details</h4>
+
+                        <dl class="dl-horizontal">
+
+
+
+                            <dt>
+                                Hospital Name
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => hospital.FullName);
+                            </dd>
+
+                            <dt>
+                                Phone No
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => hospital.PhoneNo);
+                            </dd>
+                            <dt>
+                                Email Address
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => hospital.Email);
+                            </dd>
+                            <dt>
+                                Website
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => hospital.Website);
+                            </dd>
+                            <dt>
+                                Address
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => hospital.Location);
+                            </dd>
+                            <dt>
+                                City
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => hospital.CityTable.City);
+                            </dd>
+                        </dl>
+                    }
+                }
+
+
+
+                else if (Model.BloodDonorTables.Count > 0)
+                {
+                    foreach (var blooddonor in Model.BloodDonorTables)
+                    {
+
+
+                        <h4>Blood Donor Details</h4>
+
+
+
+                        <dl class="dl-horizontal">
+
+                            <dt>
+                                Blood Donor Name
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.FullName);
+                            </dd>
+                            <dt>
+                                Blood Group
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.BloodGroupsTable.BloodGroup);
+                            </dd>
+                            <dt>
+                                Gender
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.GenderTable.Gender);
+                            </dd>
+
+                            <dt>
+                                Contact No
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.ContactNo);
+                            </dd>
+                            <dt>
+                                NID
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.NID);
+                            </dd>
+                            <dt>
+                                Location
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.Location);
+                            </dd>
+                            <dt>
+                                City
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.CityTable.City);
+                            </dd>
+                            <dt>
+                                Health Issues (if any)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.HealthIssues);
+                            </dd>
+                            <dt>
+                                Last Donation Date
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => blooddonor.LastDonationDate);
+                            </dd>
+
+                        </dl>
+                    }
+                }
+
+                else if (Model.BloodBankTables.Count > 0)
+                {
+                    foreach (var bloodbank in Model.BloodBankTables)
+                    {
+
+
+                        <h4>Blood Bank Details</h4>
+
+
+
+                        <dl class="dl-horizontal">
+
+                            <dt>
+                                Blood Bank Name
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.BloodBankName);
+                            </dd>
+
+                            <dt>
+                                Address
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.Address);
+                            </dd>
+
+                            <dt>
+                                Phone No
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.PhoneNo);
+                            </dd>
+                            <dt>
+                                Location
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.Location);
+                            </dd>
+                            <dt>
+                                Website
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.Website);
+                            </dd>
+                            <dt>
+                                Email
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.Email);
+                            </dd>
+                            <dt>
+                                City
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => bloodbank.CityTable.City);
+                            </dd>
+
+
+                        </dl>
+                    }
+                }
+                else if (Model.OrganDonorTables.Count > 0)
+                {
+                    foreach (var organdonor in Model.OrganDonorTables)
+                    {
+
+
+                        <h4>Organ Donor Details</h4>
+
+
+
+                        <dl class="dl-horizontal">
+
+                            <dt>
+                                Organ Donor Name
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.OrganDonorName);
+                            </dd>
+
+                            <dt>
+                                Gender
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.GenderTable.Gender);
+                            </dd>
+
+                            <dt>
+                                Contact No
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.ContactNo);
+                            </dd>
+                            <dt>
+                                NID
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.NID);
+                            </dd>
+                            <dt>
+                                Location
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.Location);
+                            </dd>
+                            <dt>
+                                City
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.CityTable.City);
+                            </dd>
+                            <dt>
+                                Health Issues (if any)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.HealthIssues);
+                            </dd>
+                            <dt>
+                                Last Donated Organ (if any)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.LastDonatedOrgan);
+                            </dd>
+                            <dt>
+                                Organ Type
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organdonor.OrganTypeTable.OrganName);
+                            </dd>
+
+                        </dl>
+                    }
+                }
+                else if (Model.OrganBankTables.Count > 0)
+                {
+                    foreach (var organbank in Model.OrganBankTables)
+                    {
+
+
+                        <h4>Organ Bank Details</h4>
+
+
+
+                        <dl class="dl-horizontal">
+
+                            <dt>
+                                Organ Bank Name
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.OrganBankName);
+                            </dd>
+
+                            <dt>
+                                Address
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.Address);
+                            </dd>
+
+                            <dt>
+                                Phone No
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.PhoneNo);
+                            </dd>
+                            <dt>
+                                Location
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.Location);
+                            </dd>
+                            <dt>
+                                Website
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.Website);
+                            </dd>
+                            <dt>
+                                Email
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.Email);
+                            </dd>
+                            <dt>
+                                City
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => organbank.CityTable.City);
+                            </dd>
+
+
+                        </dl>
+                    }
+                }
+
+                else if (Model.SeekerTables.Count > 0)
+                {
+                    foreach (var seeker in Model.SeekerTables)
+                    {
+
+
+                        <h4>Seeker Details</h4>
+
+
+
+                        <dl class="dl-horizontal">
+
+                            <dt>
+                                Seeker Name
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.FullName);
+                            </dd>
+
+                            <dt>
+                                Age
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.Age);
+                            </dd>
+
+                            <dt>
+                                City
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.CityTable.City);
+                            </dd>
+                            <dt>
+                                Blood Group
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.BloodGroupsTable.BloodGroup);
+                            </dd>
+                            <dt>
+                                Contact No
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.ContactNo);
+                            </dd>
+                            <dt>
+                                NID
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.NID);
+                            </dd>
+                            <dt>
+                                Gender
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.GenderTable.Gender);
+                            </dd>
+                           
+
+                          
+                            <dt>
+                                Address
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => seeker.Address);
+                            </dd>
+
+                        </dl>
+                    }
+                }
+
+
+
+            }
+
+        </div>
+
+      
+    </div>
+
+</div>

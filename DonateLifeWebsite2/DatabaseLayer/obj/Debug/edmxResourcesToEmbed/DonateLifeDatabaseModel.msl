@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DonateLifeWebsiteSDModelStoreContainer" CdmEntityContainer="DonateLifeWebsiteSDEntities">
+    <EntitySetMapping Name="AccountStatusTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.AccountStatusTable">
+        <MappingFragment StoreEntitySet="AccountStatusTable">
+          <ScalarProperty Name="AccountStatusID" ColumnName="AccountStatusID" />
+          <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloodBankTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.BloodBankTable">
+        <MappingFragment StoreEntitySet="BloodBankTable">
+          <ScalarProperty Name="BloodBankID" ColumnName="BloodBankID" />
+          <ScalarProperty Name="BloodBankName" ColumnName="BloodBankName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloodDonorTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.BloodDonorTable">
+        <MappingFragment StoreEntitySet="BloodDonorTable">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="BloodDonorID" ColumnName="BloodDonorID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="BloodGroupID" ColumnName="BloodGroupID" />
+          <ScalarProperty Name="LastDonationDate" ColumnName="LastDonationDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="HealthIssues" ColumnName="HealthIssues" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloodGroupsTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.BloodGroupsTable">
+        <MappingFragment StoreEntitySet="BloodGroupsTable">
+          <ScalarProperty Name="BloodGroupID" ColumnName="BloodGroupID" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.CityTable">
+        <MappingFragment StoreEntitySet="CityTable">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.GenderTable">
+        <MappingFragment StoreEntitySet="GenderTable">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HospitalTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.HospitalTable">
+        <MappingFragment StoreEntitySet="HospitalTable">
+          <ScalarProperty Name="HospitalID" ColumnName="HospitalID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganBankStockTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.OrganBankStockTable">
+        <MappingFragment StoreEntitySet="OrganBankStockTable">
+          <ScalarProperty Name="OrganBankStockID" ColumnName="OrganBankStockID" />
+          <ScalarProperty Name="OrganTypeID" ColumnName="OrganTypeID" />
+          <ScalarProperty Name="Stauts" ColumnName="Stauts" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="OrganBankID" ColumnName="OrganBankID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganBankTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.OrganBankTable">
+        <MappingFragment StoreEntitySet="OrganBankTable">
+          <ScalarProperty Name="OrganBankID" ColumnName="OrganBankID" />
+          <ScalarProperty Name="OrganBankName" ColumnName="OrganBankName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganDonorTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.OrganDonorTable">
+        <MappingFragment StoreEntitySet="OrganDonorTable">
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="OrganDonorID" ColumnName="OrganDonorID" />
+          <ScalarProperty Name="OrganDonorName" ColumnName="OrganDonorName" />
+          <ScalarProperty Name="OrganTypeID" ColumnName="OrganTypeID" />
+          <ScalarProperty Name="LastDonatedOrgan" ColumnName="LastDonatedOrgan" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="HealthIssues" ColumnName="HealthIssues" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganTypeTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.OrganTypeTable">
+        <MappingFragment StoreEntitySet="OrganTypeTable">
+          <ScalarProperty Name="OrganTypeID" ColumnName="OrganTypeID" />
+          <ScalarProperty Name="OrganName" ColumnName="OrganName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeekerTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.SeekerTable">
+        <MappingFragment StoreEntitySet="SeekerTable">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SeekerID" ColumnName="SeekerID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="BloodGroupID" ColumnName="BloodGroupID" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="OrganTypeID" ColumnName="OrganTypeID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.UserTable">
+        <MappingFragment StoreEntitySet="UserTable">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="AccountStatusID" ColumnName="AccountStatusID" />
+          <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypeTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.UserTypeTable">
+        <MappingFragment StoreEntitySet="UserTypeTable">
+          <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestTypeTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.RequestTypeTable">
+        <MappingFragment StoreEntitySet="RequestTypeTable">
+          <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+          <ScalarProperty Name="RequestTypeID" ColumnName="RequestTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloodBankStockDetailTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.BloodBankStockDetailTable">
+        <MappingFragment StoreEntitySet="BloodBankStockDetailTable">
+          <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+          <ScalarProperty Name="BloodDonateDateTime" ColumnName="BloodDonateDateTime" />
+          <ScalarProperty Name="BloodDonorID" ColumnName="BloodDonorID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="BloodGroupID" ColumnName="BloodGroupID" />
+          <ScalarProperty Name="BloodBankStockID" ColumnName="BloodBankStockID" />
+          <ScalarProperty Name="BloodBankStockDetailID" ColumnName="BloodBankStockDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaignTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.CampaignTable">
+        <MappingFragment StoreEntitySet="CampaignTable">
+          <ScalarProperty Name="CampaignTitle" ColumnName="CampaignTitle" />
+          <ScalarProperty Name="CampaignPhoto" ColumnName="CampaignPhoto" />
+          <ScalarProperty Name="CampaignDetails" ColumnName="CampaignDetails" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="CampaignDate" ColumnName="CampaignDate" />
+          <ScalarProperty Name="BloodBankID" ColumnName="BloodBankID" />
+          <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloodBankStockTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.BloodBankStockTable">
+        <MappingFragment StoreEntitySet="BloodBankStockTable">
+          <ScalarProperty Name="BloodBankID" ColumnName="BloodBankID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BloodGroupID" ColumnName="BloodGroupID" />
+          <ScalarProperty Name="BloodBankStockID" ColumnName="BloodBankStockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AcceptedTypeTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.AcceptedTypeTable">
+        <MappingFragment StoreEntitySet="AcceptedTypeTable">
+          <ScalarProperty Name="AcceptedType" ColumnName="AcceptedType" />
+          <ScalarProperty Name="AcceptedTypeID" ColumnName="AcceptedTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestStatusTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.RequestStatusTable">
+        <MappingFragment StoreEntitySet="RequestStatusTable">
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="RequestStatusID" ColumnName="RequestStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.RequestTable">
+        <MappingFragment StoreEntitySet="RequestTable">
+          <ScalarProperty Name="RequestDetails" ColumnName="RequestDetails" />
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="RequestStatusID" ColumnName="RequestStatusID" />
+          <ScalarProperty Name="AcceptedTypeID" ColumnName="AcceptedTypeID" />
+          <ScalarProperty Name="RequestTypeID" ColumnName="RequestTypeID" />
+          <ScalarProperty Name="RequiredBloodGroupID" ColumnName="RequiredBloodGroupID" />
+          <ScalarProperty Name="AcceptedID" ColumnName="AcceptedID" />
+          <ScalarProperty Name="RequestByID" ColumnName="RequestByID" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AcceptedTypeOrganTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.AcceptedTypeOrganTable">
+        <MappingFragment StoreEntitySet="AcceptedTypeOrganTable">
+          <ScalarProperty Name="AcceptedTypeOrgan" ColumnName="AcceptedTypeOrgan" />
+          <ScalarProperty Name="AcceptedTypeOrganID" ColumnName="AcceptedTypeOrganID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestOrganTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.RequestOrganTable">
+        <MappingFragment StoreEntitySet="RequestOrganTable">
+          <ScalarProperty Name="RequestDetails" ColumnName="RequestDetails" />
+          <ScalarProperty Name="ExpectedDate" ColumnName="ExpectedDate" />
+          <ScalarProperty Name="RequestStatusOrganID" ColumnName="RequestStatusOrganID" />
+          <ScalarProperty Name="AcceptedTypeOrganID" ColumnName="AcceptedTypeOrganID" />
+          <ScalarProperty Name="RequestTypeOrganID" ColumnName="RequestTypeOrganID" />
+          <ScalarProperty Name="RequiredOrganID" ColumnName="RequiredOrganID" />
+          <ScalarProperty Name="AcceptedOrganID" ColumnName="AcceptedOrganID" />
+          <ScalarProperty Name="RequestByOrganID" ColumnName="RequestByOrganID" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="RequestOrganID" ColumnName="RequestOrganID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestStatusOrganTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.RequestStatusOrganTable">
+        <MappingFragment StoreEntitySet="RequestStatusOrganTable">
+          <ScalarProperty Name="RequestStatusOrgan" ColumnName="RequestStatusOrgan" />
+          <ScalarProperty Name="RequestStatusOrganID" ColumnName="RequestStatusOrganID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestTypeOrganTables">
+      <EntityTypeMapping TypeName="DonateLifeWebsiteSDModel.RequestTypeOrganTable">
+        <MappingFragment StoreEntitySet="RequestTypeOrganTable">
+          <ScalarProperty Name="RequestTypeOrgan" ColumnName="RequestTypeOrgan" />
+          <ScalarProperty Name="RequestTypeOrganID" ColumnName="RequestTypeOrganID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

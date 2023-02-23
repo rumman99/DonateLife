@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c7a932449334d6798e0e803b24e208f" Name="Diagram1">
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.AccountStatusTable" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.BloodBankTable" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.BloodDonorTable" Width="1.5" PointX="8.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.BloodGroupsTable" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.CityTable" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.GenderTable" Width="1.5" PointX="6" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.HospitalTable" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.OrganBankStockTable" Width="1.5" PointX="10.5" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.OrganBankTable" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.OrganDonorTable" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.OrganTypeTable" Width="1.5" PointX="6" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.SeekerTable" Width="1.5" PointX="8.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.UserTable" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.UserTypeTable" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_UserTable_AccountStatusTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankTable_CityTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodDonorTable_BloodGroupsTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodDonorTable_CityTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodDonorTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_SeekerTable_BloodGroupsTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_HospitalTable_CityTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganBankTable_CityTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganDonorTable_CityTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_SeekerTable_CityTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_SeekerTable_GenderTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_HospitalTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganBankStockTable_OrganBankTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganBankStockTable_OrganTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganBankTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganDonorTable_OrganTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganDonorTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_SeekerTable_OrganTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_SeekerTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_UserTable_UserTypeTable" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.RequestTypeTable" Width="1.5" PointX="0.75" PointY="4.875" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodDonorTable_BloodDonorTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodDonorTable_GenderTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_OrganDonorTable_GenderTable" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.BloodBankStockDetailTable" Width="1.5" PointX="12.75" PointY="15.125" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.CampaignTable" Width="1.5" PointX="7.5" PointY="26.25" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankStockDetailTable_BloodDonorTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankStockDetailTable_BloodGroupsTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankStockDetailTable_CampaignTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_CampaignTable_BloodBankTable" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.BloodBankStockTable" Width="1.5" PointX="10.5" PointY="9.125" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankStockDetailTable_BloodBankStockTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankStockTable_BloodBankTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_BloodBankStockTable_BloodGroupsTable" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.AcceptedTypeTable" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.RequestStatusTable" Width="1.5" PointX="8.375" PointY="0.875" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.RequestTable" Width="1.5" PointX="10.625" PointY="3.375" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_RequestTable_AcceptedTypeTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_RequestTable_RequestStatusTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_RequestTable_RequestTypeTable" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.AcceptedTypeOrganTable" Width="1.5" PointX="13.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.RequestOrganTable" Width="1.5" PointX="15.625" PointY="1" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.RequestStatusOrganTable" Width="1.5" PointX="13.375" PointY="8.125" />
+        <EntityTypeShape EntityType="DonateLifeWebsiteSDModel.RequestTypeOrganTable" Width="1.5" PointX="13.375" PointY="2" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_RequestOrganTable_AcceptedTypeOrganTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_RequestOrganTable_RequestStatusOrganTable" />
+        <AssociationConnector Association="DonateLifeWebsiteSDModel.FK_RequestOrganTable_RequestTypeOrganTable" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

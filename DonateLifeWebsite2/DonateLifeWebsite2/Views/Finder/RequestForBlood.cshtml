@@ -1,0 +1,64 @@
+﻿@model DonateLifeWebsite2.Models.RequestMV
+
+@{
+    ViewBag.Title = "RequestForBlood";
+}
+<style>
+
+    .btn-theme {
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 24px;
+    }
+
+
+
+</style>
+
+<div class="container">
+    <div class="col-md-8 margin-top-30">
+        <div class="contact-form-block">
+            <h2 class="contact-title">Request For Blood</h2>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+
+
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model=>model.AcceptedID)
+                @Html.HiddenFor(model=>model.AcceptedTypeID)
+                @Html.HiddenFor(model=>model.RequiredBloodGroupID)
+                <div class="form-group">
+
+
+                    Select Expected Date
+                    @Html.EditorFor(model => model.ExpectedDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ExpectedDate, "", new { @class = "text-danger" })
+
+                </div>
+
+                <div class="form-group">
+                    Request Details
+
+                    @Html.EditorFor(model => model.RequestDetails, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.RequestDetails, "", new { @class = "text-danger" })
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="submit" style="float:right;" value="Submit Request" class="btn btn-custom float-end" />
+                    @Html.ActionLink("Find Another Donors", "FinderBloodDonors", null, new { @class = "btn btn-theme" })
+
+                </div>
+
+            }
+
+
+        </div>
+    </div>
+</div>

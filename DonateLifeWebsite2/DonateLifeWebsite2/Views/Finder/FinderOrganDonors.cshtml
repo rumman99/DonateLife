@@ -1,0 +1,112 @@
+﻿
+@model DonateLifeWebsite2.Models.FinderOrganMV
+
+@{
+    ViewBag.Title = "Find Organ Donor";
+}
+
+@using (Html.BeginForm())
+{
+    bool isuserlogin = true;
+    if (string.IsNullOrEmpty(Convert.ToString(Session["UserName"])))
+    {
+        isuserlogin = false;
+    }
+
+    @Html.AntiForgeryToken()
+
+
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="col-md-12 margin-top-30">
+            <div class="contact-form-block">
+                <h2 class="contact-title">Find Organ Donor</h2>
+
+                <p>
+                    <div class="form-group col-md-12">
+                        <div class="select-style">
+                            @Html.DropDownList("OrganTypeID", null, "--Select Organ Type--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.OrganTypeID, "", new { @class = "text-danger" })
+
+
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <div class="select-style">
+                            @Html.DropDownList("CityID", null, "--Your City--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CityID, "", new { @class = "text-danger" })
+
+
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+
+                        <input type="submit" style="float:right;" value="Search" class="btn btn-custom float-end" />
+
+
+                    </div>
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="accordion">
+
+                @foreach (var item in Model.SearchResult)
+                {
+
+                    <div class="panel panel-default faq-box">
+                        <div class="panel-heading">
+                            <div class="text-left">
+                                <h4 class="panel-title text-left">
+                                    <a class="accordion-toggle collapsed"
+                                       data-toggle="collapse"
+                                       data-parent="#accordion"
+                                       href="#@string.Format("collapse{0}",item.UserID)"><strong>@item.FullName (@item.BloodGroup)</strong></a>
+                                    @Html.ActionLink("Request", "RequestForBlood", new { donorid = item.BloodDonorID, usertypeid = item.UserTypeID, bloodgroupid = item.BloodGroupID }, new { @class = "btn btn-custom", @style = "float:right;background-color:#FE3C47;border:none;color:white;padding:10px 22px;text-align:center;display:inline-block;font-size:14px;" })
+                                </h4>
+                            </div>
+
+                        </div>
+                        @if (isuserlogin == true)
+                        {
+                            <div id="@string.Format("collapse{0}", item.UserID)" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <strong>@item.UserType</strong><br />
+                                    <strong>Phone No:@item.ContactNo</strong><br />
+                                    <strong>Address:@item.Address</strong>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div id="@string.Format("collapse{0}", item.UserID)" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <strong>Please first Login to Get Donor Full Details</strong><br />
+
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+
+
+
+
+
+
+
+
+                }
+
+            </div>
+        </div>
+    </div>
+}
+
+

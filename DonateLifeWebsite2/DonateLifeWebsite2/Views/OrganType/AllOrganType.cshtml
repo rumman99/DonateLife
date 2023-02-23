@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DonateLifeWebsite2.Models.OrganTypeMV>
+
+@{
+    ViewBag.Title = "AllOrganType";
+}
+
+<div class="container">
+    <div class="col-md-6 margin-top-30">
+        <div class="contact-form-block">
+            <h2 class="contact-title">All Organ Types</h2>
+
+            <p>
+                @Html.ActionLink("New Organ Type", "Create", null, new { @class = "btn-dynamism" })
+            </p>
+            <table class="table table-hover">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrganName)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrganName)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.OrganTypeID }, new { @class = "btn btn-primary" }) |
+
+                            @Html.ActionLink("Delete", "Delete", new { id = item.OrganTypeID }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
+

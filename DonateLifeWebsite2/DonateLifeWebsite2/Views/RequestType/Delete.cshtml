@@ -1,0 +1,39 @@
+﻿@model DonateLifeWebsite2.Models.RequestTypeMV
+
+@{
+    ViewBag.Title = "Delete Request Type";
+}
+
+<div class="container">
+    <div class="col-md-6 margin-top-30">
+        <div class="contact-form-block">
+            <h2 class="contact-title">Delete Request Type</h2>
+
+            <h3>Are you sure you want to delete this?</h3>
+            <div>
+             
+              
+                <table class="table table-hover">
+                    <tr>
+                        @Html.DisplayNameFor(model => model.RequestType)
+                    </tr>
+
+                    <td>
+                        @Html.DisplayFor(model => model.RequestType)
+                    </td>
+
+                </table>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Delete" style="float:right;"  class="btn btn-danger" /> 
+                        @Html.ActionLink("Back to List", "AllRequestType")
+                    </div>
+                }
+            </div>
+            </div>
+        </div>
+    </div>
